@@ -1,0 +1,65 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "민간위탁사무 공개 데이터",
+  "description": "행정위임위탁규정 제13조 제3항에 따른 민간위탁계약 공개 정보",
+  "type": "object",
+  "required": ["agency_code", "agency_name", "task_name", "contractor"],
+  "properties": {
+    "agency_code": {
+      "type": "string",
+      "description": "위탁기관 코드 (행정표준코드)"
+    },
+    "agency_name": {
+      "type": "string",
+      "description": "위탁기관명"
+    },
+    "task_name": {
+      "type": "string",
+      "description": "민간위탁사무 내용"
+    },
+    "legal_basis": {
+      "type": "string",
+      "description": "위탁 법적 근거 (법률 조항)"
+    },
+    "contractor": {
+      "type": "string",
+      "description": "민간수탁기관명"
+    },
+    "contract_start": {
+      "type": "string",
+      "format": "date",
+      "description": "위탁 시작일"
+    },
+    "contract_end": {
+      "type": "string",
+      "format": "date",
+      "description": "위탁 종료일"
+    },
+    "fee_or_cost": {
+      "type": "string",
+      "description": "위탁 수수료 또는 비용"
+    },
+    "obligations": {
+      "type": "string",
+      "description": "민간수탁기관의 의무"
+    },
+    "breach_liability": {
+      "type": "string",
+      "description": "계약 위반 시 책임"
+    },
+    "source_url": {
+      "type": "string",
+      "format": "uri",
+      "description": "원본 공개 페이지 URL"
+    },
+    "collected_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "데이터 수집 일시"
+    },
+    "notes": {
+      "type": "string",
+      "description": "비고"
+    }
+  }
+}
