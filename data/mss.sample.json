@@ -1,0 +1,32 @@
+[
+  {
+    "agency_code": "1421000",
+    "agency_name": "중소벤처기업부",
+    "task_name": "중소기업 탄소중립 설비투자 지원사업 수탁기관 선정결과",
+    "legal_basis": "행정권한의 위임 및 위탁에 관한 규정 제13조",
+    "contractor": null,
+    "contract_start": null,
+    "contract_end": null,
+    "fee_or_cost": null,
+    "obligations": null,
+    "breach_liability": null,
+    "source_url": "https://m.mss.go.kr/site/smba/ex/bbs/View.do?cbIdx=81&bcIdx=1055852",
+    "collected_at": "2026-03-25T14:54:00Z",
+    "notes": "검색엔진 노출 확인, 수탁기관 선정결과"
+  },
+  {
+    "agency_code": "1421000",
+    "agency_name": "중소벤처기업부",
+    "task_name": "청년글로벌시장 진출지원 민간위탁기관 공모",
+    "legal_basis": "행정권한의 위임 및 위탁에 관한 규정 제13조",
+    "contractor": null,
+    "contract_start": null,
+    "contract_end": null,
+    "fee_or_cost": null,
+    "obligations": null,
+    "breach_liability": null,
+    "source_url": "https://www.mss.go.kr/site/smba/ex/bbs/View.do?cbIdx=310&bcIdx=1027163",
+    "collected_at": "2026-03-25T14:54:00Z",
+    "notes": "검색엔진 노출 확인, 민간위탁기관 공모"
+  }
+]
