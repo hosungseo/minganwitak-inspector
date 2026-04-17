@@ -146,7 +146,131 @@ tbody tr:hover{background:#f8fafd}
 .toggle-sw.off{background:#d1d5db}
 .pub-preview{background:#f8f9fc;border:2px dashed #c084fc;border-radius:8px;padding:16px;margin-top:10px}
 .pub-preview .sec{border-left-color:#7c3aed}
-@media(max-width:768px){.fg{grid-template-columns:1fr}.dg{grid-template-columns:100px 1fr}.sg{grid-template-columns:repeat(3,1fr)}}
+/* --- frontpage refinement inspired by styleseed / impeccable / design-md --- */
+body{
+  background:
+    radial-gradient(circle at top left, rgba(59,130,246,.08), transparent 32%),
+    radial-gradient(circle at top right, rgba(20,184,166,.06), transparent 28%),
+    #f4f7fb;
+  color:#0f172a;
+  letter-spacing:-.01em;
+}
+.hdr{
+  height:68px;
+  padding:0 26px;
+  background:rgba(11,18,32,.86);
+  border-bottom:1px solid rgba(255,255,255,.08);
+  backdrop-filter:blur(16px);
+}
+.logo{
+  width:34px;height:34px;border-radius:10px;
+  background:linear-gradient(135deg,#2563eb,#14b8a6);
+  box-shadow:0 12px 28px rgba(37,99,235,.18);
+}
+.brand-block{display:flex;flex-direction:column;gap:2px}
+.brand-kicker{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.54);font-weight:700}
+.hdr h1{font-size:15px;font-weight:700;letter-spacing:-.02em}
+.user-chip{font-size:11px;opacity:.9;padding:7px 10px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.06)}
+.nav{background:transparent;border-bottom:none;padding:12px 24px 0;gap:8px}
+.ni{
+  padding:9px 14px;
+  border-radius:999px;
+  border:1px solid rgba(148,163,184,.22);
+  background:rgba(255,255,255,.58);
+  box-shadow:0 1px 1px rgba(15,23,42,.02);
+  font-size:12px;
+}
+.ni:hover{color:#0f172a;border-color:rgba(37,99,235,.2);background:#fff}
+.ni.on{color:#0f172a;border-bottom-color:transparent;border-color:rgba(15,23,42,.08);background:#fff;box-shadow:0 10px 24px rgba(15,23,42,.06);font-weight:700}
+.ct{padding:22px 24px 28px;max-width:1480px}
+.card{
+  border:1px solid rgba(203,213,225,.7);
+  box-shadow:0 16px 42px rgba(15,23,42,.06);
+  background:rgba(255,255,255,.78);
+  backdrop-filter:blur(10px);
+  border-radius:18px;
+}
+.chd{padding-bottom:14px;margin-bottom:14px;border-bottom:1px solid rgba(226,232,240,.8)}
+.ctt{font-size:15px;letter-spacing:-.02em}
+.card-meta{font-size:11px;color:#64748b}
+.tbl-w{overflow:auto;border-radius:14px}
+th{background:#f8fafc;color:#475569;font-size:10px;padding:10px 12px}
+td{padding:11px 12px;font-size:12px}
+tbody tr:hover{background:#f8fbff}
+.flt select,.flt input{
+  border-radius:999px;
+  padding:8px 12px;
+  border:1px solid rgba(203,213,225,.9);
+  background:rgba(255,255,255,.92);
+}
+.flt select:focus,.flt input:focus{box-shadow:0 0 0 4px rgba(37,99,235,.08)}
+.sg.summary-strip{gap:10px;margin-bottom:18px}
+.sc{padding:12px 14px;border-radius:16px;box-shadow:inset 0 1px 0 rgba(255,255,255,.7)}
+.sc .sl{font-size:10px;letter-spacing:.04em;text-transform:uppercase}
+.sc .sv{font-size:24px;letter-spacing:-.03em}
+.workspace-hero{
+  display:grid;
+  grid-template-columns:minmax(0,1.7fr) minmax(320px,.9fr);
+  gap:18px;
+  margin-bottom:18px;
+  padding:24px 26px;
+  border-radius:24px;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.86), rgba(248,250,252,.94)),
+    radial-gradient(circle at 0% 0%, rgba(59,130,246,.08), transparent 26%);
+  border:1px solid rgba(226,232,240,.9);
+  box-shadow:0 20px 50px rgba(15,23,42,.08);
+}
+.workspace-hero-copy h2{font-size:31px;line-height:1.1;letter-spacing:-.045em;max-width:18ch;margin-bottom:10px}
+.workspace-hero-copy p{font-size:14px;line-height:1.7;color:#475569;max-width:66ch}
+.hero-eyebrow{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#2563eb;font-weight:800;margin-bottom:10px}
+.hero-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.hero-tag{padding:7px 10px;border-radius:999px;background:#fff;border:1px solid rgba(37,99,235,.12);font-size:11px;font-weight:600;color:#334155}
+.workspace-hero-side{
+  border-radius:20px;
+  padding:18px;
+  background:linear-gradient(180deg,#0f172a,#111827);
+  color:#fff;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  min-height:220px;
+}
+.hero-side-label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.58);font-weight:700}
+.hero-side-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:18px}
+.hero-side-grid div{padding:12px 0;border-top:1px solid rgba(255,255,255,.08)}
+.hero-side-grid span{display:block;font-size:11px;color:rgba(255,255,255,.58);margin-bottom:6px}
+.hero-side-grid strong{display:block;font-size:32px;letter-spacing:-.05em;line-height:1;font-weight:800}
+.hero-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.hero-actions .btn{padding:8px 12px;font-size:11px}
+.workspace-table-card{padding-top:18px}
+.filter-strip{justify-content:space-between}
+.filter-strip input{flex:1;min-width:220px;max-width:320px}
+.btn{
+  border-radius:999px;
+  padding:7px 13px;
+  font-weight:600;
+}
+.bp{box-shadow:0 10px 24px rgba(37,99,235,.16)}
+.bo{background:rgba(255,255,255,.9)}
+@media(max-width:980px){
+  .workspace-hero{grid-template-columns:1fr}
+  .workspace-hero-copy h2{max-width:none;font-size:28px}
+}
+@media(max-width:768px){
+  .fg{grid-template-columns:1fr}
+  .dg{grid-template-columns:100px 1fr}
+  .sg{grid-template-columns:repeat(2,1fr)}
+  .hdr{padding:0 16px;height:62px}
+  .brand-kicker{display:none}
+  .hdr h1{font-size:13px}
+  .nav{padding:10px 16px 0}
+  .ct{padding:18px 16px 24px}
+  .workspace-hero{padding:20px 18px;border-radius:20px}
+  .workspace-hero-copy h2{font-size:24px}
+  .workspace-hero-copy p{font-size:13px}
+  .hero-side-grid strong{font-size:26px}
+}
 `;
 
 // ── Shared form components ──
@@ -228,15 +352,45 @@ function DetailView({c,prev,onBack,onEdit,onConfirm,onReturn,onDelete,onClone,pu
 }
 
 // ── BoardView ──
-function BoardView({cases,allCases,fMin,setFMin,fSt,setFSt,fQ,setFQ,onDetail,onNew,onEdit,onClone,onBulk,onCarry}){
+function BoardView({year,cases,allCases,fMin,setFMin,fSt,setFSt,fQ,setFQ,onDetail,onNew,onEdit,onClone,onBulk,onCarry,onOpenDashboard,onOpenPublish}){
   const st={total:allCases.length,draft:allCases.filter(c=>c.status==="DRAFT").length,submitted:allCases.filter(c=>c.status==="SUBMITTED").length,returned:allCases.filter(c=>c.status==="RETURNED").length,confirmed:allCases.filter(c=>c.status==="CONFIRMED").length};
+  const ministries=[...new Set(allCases.map(c=>c.ministry))].sort();
   return <>
-    <div className="sg">{[{l:"전체",v:st.total,c:"#374151",bg:"#f3f4f6"},{l:"작성중",v:st.draft,c:"#6b7280",bg:"#f9fafb"},{l:"제출완료",v:st.submitted,c:"#2563eb",bg:"#eff6ff"},{l:"보완요청",v:st.returned,c:"#dc2626",bg:"#fef2f2"},{l:"확정",v:st.confirmed,c:"#059669",bg:"#ecfdf5"}].map(s=><div key={s.l} className="sc" style={{background:s.bg,borderColor:s.c+"22"}}><div className="sl" style={{color:s.c}}>{s.l}</div><div className="sv" style={{color:s.c}}>{s.v}</div></div>)}</div>
-    <div className="card"><div className="chd"><div style={{display:"flex",alignItems:"center",gap:8}}><span className="ctt">위탁사무 목록</span><span style={{fontSize:11,color:"#636d82"}}>{cases.length}건</span></div><div style={{display:"flex",gap:5}}><button className="btn bg bs" onClick={onCarry}>📥 이월</button><button className="btn bo bs" onClick={onBulk}>📤 일괄제출</button><button className="btn bp bs" onClick={onNew}>＋ 신규</button></div></div>
-    <div className="flt" style={{marginBottom:10}}><select value={fMin} onChange={e=>setFMin(e.target.value)}><option value="">전체 부처</option>{[...new Set(allCases.map(c=>c.ministry))].sort().map(m=><option key={m}>{m}</option>)}</select><select value={fSt} onChange={e=>setFSt(e.target.value)}><option value="">전체 상태</option>{Object.entries(STATUSES).map(([k,v])=><option key={k} value={k}>{v}</option>)}</select><input placeholder="검색" value={fQ} onChange={e=>setFQ(e.target.value)} style={{width:160}}/></div>
+    <section className="workspace-hero">
+      <div className="workspace-hero-copy">
+        <div className="hero-eyebrow">GONPUNCLAW · WORKSPACE</div>
+        <h2>민간위탁 실태점검과 공개관리를 한 화면에서 다루는 운영형 워크스페이스</h2>
+        <p>실태점검, 보완요청, 연도 이월, 공개승인까지 한 흐름으로 정리한 데모입니다. 첫 화면은 설명보다 바로 운영에 들어갈 수 있도록 조용한 제품 UI로 정리했습니다.</p>
+        <div className="hero-tags">
+          <span className="hero-tag">실태점검 {year}</span>
+          <span className="hero-tag">부처 {ministries.length}개</span>
+          <span className="hero-tag">공개관리 연계</span>
+          <span className="hero-tag">민간위탁 운영 데모</span>
+        </div>
+      </div>
+      <div className="workspace-hero-side">
+        <div className="hero-side-label">Current snapshot</div>
+        <div className="hero-side-grid">
+          <div><span>확정</span><strong>{st.confirmed}</strong></div>
+          <div><span>보완요청</span><strong>{st.returned}</strong></div>
+          <div><span>작성중</span><strong>{st.draft}</strong></div>
+          <div><span>전체</span><strong>{st.total}</strong></div>
+        </div>
+        <div className="hero-actions">
+          <button className="btn bp" onClick={onNew}>＋ 신규 등록</button>
+          <button className="btn bo" onClick={onOpenPublish}>🌐 공개 관리</button>
+          <button className="btn bg" onClick={onOpenDashboard}>📊 대시보드</button>
+        </div>
+      </div>
+    </section>
+
+    <div className="sg summary-strip">{[{l:"전체",v:st.total,c:"#111827",bg:"#f3f4f6"},{l:"작성중",v:st.draft,c:"#6b7280",bg:"#f9fafb"},{l:"제출완료",v:st.submitted,c:"#2563eb",bg:"#eff6ff"},{l:"보완요청",v:st.returned,c:"#dc2626",bg:"#fef2f2"},{l:"확정",v:st.confirmed,c:"#059669",bg:"#ecfdf5"}].map(s=><div key={s.l} className="sc" style={{background:s.bg,borderColor:s.c+"18"}}><div className="sl" style={{color:s.c}}>{s.l}</div><div className="sv" style={{color:s.c}}>{s.v}</div></div>)}</div>
+
+    <div className="card workspace-table-card"><div className="chd"><div style={{display:"flex",alignItems:"center",gap:8,flexWrap:"wrap"}}><span className="ctt">위탁사무 목록</span><span className="card-meta">{cases.length}건 · 현재 연도 운영 목록</span></div><div style={{display:"flex",gap:5,flexWrap:"wrap"}}><button className="btn bg bs" onClick={onCarry}>📥 이월</button><button className="btn bo bs" onClick={onBulk}>📤 일괄제출</button></div></div>
+    <div className="flt filter-strip" style={{marginBottom:12}}><select value={fMin} onChange={e=>setFMin(e.target.value)}><option value="">전체 부처</option>{ministries.map(m=><option key={m}>{m}</option>)}</select><select value={fSt} onChange={e=>setFSt(e.target.value)}><option value="">전체 상태</option>{Object.entries(STATUSES).map(([k,v])=><option key={k} value={k}>{v}</option>)}</select><input placeholder="부처·사무명·수탁기관 검색" value={fQ} onChange={e=>setFQ(e.target.value)} style={{width:220}}/></div>
     <div className="tbl-w"><table><thead><tr><th>#</th><th>부처</th><th>위탁사무명</th><th>수탁기관</th><th style={{textAlign:"right"}}>비용</th><th>미이행</th><th>상태</th><th>공개</th><th>관리</th></tr></thead><tbody>
-      {!cases.length&&<tr><td colSpan={9} style={{textAlign:"center",padding:30,color:"#636d82"}}>데이터 없음</td></tr>}
-      {cases.map((c,i)=>{const fl=SUP_FIELDS.filter(f=>isFail(c[f.key])).length;return <tr key={c.id}><td style={{color:"#9ca3af"}}>{i+1}</td><td>{c.ministry}</td><td><span className="lnk" onClick={()=>onDetail(c)}>{c.taskName}</span></td><td style={{maxWidth:120,overflow:"hidden",textOverflow:"ellipsis",whiteSpace:"nowrap"}}>{c.contractor}</td><td style={{textAlign:"right",fontVariantNumeric:"tabular-nums"}}>{c.costAmount?Number(c.costAmount).toLocaleString():"-"}</td><td>{fl>0?<span className="badge" style={{background:"#fef2f2",color:"#dc2626"}}>{fl}</span>:<span style={{color:"#d1d5db"}}>—</span>}</td><td><span className="badge" style={{background:ST_COL[c.status]+"15",color:ST_COL[c.status]}}>{STATUSES[c.status]}</span></td><td>{c.pubStatus!=="NONE"?<span className="badge" style={{background:PUB_COL[c.pubStatus]+"15",color:PUB_COL[c.pubStatus]}}>{PUB_ST[c.pubStatus]}</span>:<span style={{color:"#d1d5db"}}>—</span>}</td><td><div style={{display:"flex",gap:3}}>{(c.status==="DRAFT"||c.status==="RETURNED")&&<button className="btn bs bo" onClick={()=>onEdit(c)}>수정</button>}<button className="btn bs bg" onClick={()=>onClone(c)}>복제</button></div></td></tr>;})}
+      {!cases.length&&<tr><td colSpan={9} style={{textAlign:"center",padding:36,color:"#64748b"}}>조건에 맞는 데이터가 없습니다</td></tr>}
+      {cases.map((c,i)=>{const fl=SUP_FIELDS.filter(f=>isFail(c[f.key])).length;return <tr key={c.id}><td style={{color:"#9ca3af"}}>{i+1}</td><td>{c.ministry}</td><td><span className="lnk" onClick={()=>onDetail(c)}>{c.taskName}</span></td><td style={{maxWidth:120,overflow:"hidden",textOverflow:"ellipsis",whiteSpace:"nowrap"}}>{c.contractor}</td><td style={{textAlign:"right",fontVariantNumeric:"tabular-nums"}}>{c.costAmount?Number(c.costAmount).toLocaleString():"-"}</td><td>{fl>0?<span className="badge" style={{background:"#fef2f2",color:"#dc2626"}}>{fl}</span>:<span style={{color:"#d1d5db"}}>—</span>}</td><td><span className="badge" style={{background:ST_COL[c.status]+"15",color:ST_COL[c.status]}}>{STATUSES[c.status]}</span></td><td>{c.pubStatus!=="NONE"?<span className="badge" style={{background:PUB_COL[c.pubStatus]+"15",color:PUB_COL[c.pubStatus]}}>{PUB_ST[c.pubStatus]}</span>:<span style={{color:"#d1d5db"}}>—</span>}</td><td><div style={{display:"flex",gap:3,flexWrap:"wrap"}}>{(c.status==="DRAFT"||c.status==="RETURNED")&&<button className="btn bs bo" onClick={()=>onEdit(c)}>수정</button>}<button className="btn bs bg" onClick={()=>onClone(c)}>복제</button></div></td></tr>;})}
     </tbody></table></div></div>
   </>;
 }
@@ -465,7 +619,7 @@ export default function App(){
   };
 
   let content=null;
-  if(tab==="board"&&view==="list")content=<BoardView cases={filtered} allCases={cases} fMin={fMin} setFMin={setFMin} fSt={fSt} setFSt={setFSt} fQ={fQ} setFQ={setFQ} onDetail={c=>{setSel(c);setView("detail");}} onNew={()=>{setEditing(emptyCase(year));setView("form");}} onEdit={c=>{setEditing({...c});setView("form");}} onClone={cloneCase} onBulk={bulkSubmit} onCarry={doCarryover}/>;
+  if(tab==="board"&&view==="list")content=<BoardView year={year} cases={filtered} allCases={cases} fMin={fMin} setFMin={setFMin} fSt={fSt} setFSt={setFSt} fQ={fQ} setFQ={setFQ} onDetail={c=>{setSel(c);setView("detail");}} onNew={()=>{setEditing(emptyCase(year));setView("form");}} onEdit={c=>{setEditing({...c});setView("form");}} onClone={cloneCase} onBulk={bulkSubmit} onCarry={doCarryover} onOpenDashboard={()=>{setTab("dashboard");resetView();}} onOpenPublish={()=>{setTab("publish");resetView();}}/>;
   else if(tab==="board"&&view==="detail"&&sel)content=<DetailView c={sel} prev={getPrev(sel)} onBack={()=>setView("list")} onEdit={c=>{setEditing({...c});setView("form");}} onConfirm={confirmCase} onReturn={returnCase} onDelete={deleteCase} onClone={cloneCase} pubFields={pubFields} onPubApprove={c=>{pubApprove(c);show("✓ 공개승인")}}/>;
   else if(tab==="board"&&view==="form"&&editing)content=<FormView c={editing} prev={getPrev(editing)} onSave={saveCase} onBack={()=>{setView("list");setEditing(null);}} year={year}/>;
   else if(tab==="dashboard")content=<DashboardView cases={cases}/>;
@@ -473,8 +627,8 @@ export default function App(){
   else if(tab==="publish")content=<PublishView cases={cases} pubFields={pubFields} setPubFields={setPubFields} onPubApprove={pubApprove} onPubRevoke={pubRevoke} onExport={pubExport} onSetOverride={pubSetOverride} show={show}/>;
 
   return <div className="app"><style>{css}</style>
-    <header className="hdr"><div className="hdr-l"><div className="logo">위</div><h1>국가사무 민간위탁 실태점검 시스템</h1></div><div className="hdr-r"><div className="yr-sel">📅 <select value={year} onChange={e=>{setYear(+e.target.value);resetView();}}><option value={2024}>2024년</option><option value={2025}>2025년</option></select></div><div style={{fontSize:11,opacity:.8}}>👤 서호성 사무관</div></div></header>
-    <nav className="nav">{[["board","📋 목록"],["dashboard","📊 대시보드"],["stats","📈 통계"],["publish","🌐 공개 관리"]].map(([k,l])=><div key={k} className={"ni"+(tab===k?" on":"")} onClick={()=>{setTab(k);resetView();}}>{l}</div>)}</nav>
+    <header className="hdr"><div className="hdr-l"><div className="logo">위</div><div className="brand-block"><div className="brand-kicker">GONPUNCLAW · INSPECTOR</div><h1>국가사무 민간위탁 실태점검 시스템</h1></div></div><div className="hdr-r"><div className="yr-sel">📅 <select value={year} onChange={e=>{setYear(+e.target.value);resetView();}}><option value={2024}>2024년</option><option value={2025}>2025년</option></select></div><div className="user-chip">👤 서호성 사무관</div></div></header>
+    <nav className="nav">{[["board","목록"],["dashboard","대시보드"],["stats","통계"],["publish","공개 관리"]].map(([k,l])=><div key={k} className={"ni"+(tab===k?" on":"")} onClick={()=>{setTab(k);resetView();}}>{l}</div>)}</nav>
     <div className="ct">{content}</div>
     {toast&&<div className="toast">{toast}</div>}
   </div>;
